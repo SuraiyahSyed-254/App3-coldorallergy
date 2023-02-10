@@ -53,24 +53,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//This is the function that compeletes the final percentage computation of allergy percent and cold percent.
 	function getResults()
 	  {
+		//totalCount variable calculates for overall number of counts.
+		//allergyPercent and coldPercent variables make the final percentages of how likely an individual has a cold or allergy.
+		//Variable resultText aids in displaying final results on the last page.
 		var totalCount = allergy_count + cold_count;
        		var allergyPercent = (allergy_count / totalCount) * 100;
         	var coldPercent = (cold_count / totalCount) * 100;
 		var resultText = document.getElementById("results");
 	  
-       		//document.getElementById("result")
+       		//document.getElementById("result"). Problem piece.
 		//Inclusion of above comment was issue. I needed to be using variable name instead of document.
+		  
 		resultText.innerHTML = "Probability it is allergies: " + allergyPercent + "% <br>" + "Probability it is a cold: " + coldPercent + "%";
 	  }
   </script>
   <!-- Button for results is not retrieving input function getResults is offering.-->
+  <!--Above comment was later corrected by replacing variable function with name for innerHTML.-->
 	
   <!--<script>
 	var resultText = document.getElementById("results")
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent </p>
   </script>
   -->
-  <!--This is broken.-->
+  <!--This is broken (above code). Needed to comment it to detect problem.-->
 
 
 
