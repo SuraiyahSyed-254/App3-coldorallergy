@@ -40,17 +40,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var allergy_count = 0;
         var cold_count = 0;
 
-
+	//This function accounts for adding together the allergy count whenever yes or no is hit for a question that's answer is allergy.
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
 
         }
-
+	//This function is to count the number of answers that correspond with the symptoms of having a cold.
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+	//This is the function that compeletes the final percentage computation of allergy percent and cold percent.
 	function getResults()
 	  {
 		var totalCount = allergy_count + cold_count;
