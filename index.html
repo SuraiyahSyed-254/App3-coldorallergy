@@ -53,11 +53,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   </script>
   <!--Noting to self: this is what is being used to count and why alerts are counting up when clicking yes.-->	
-	
+
   <script>
+	let totalCount = allergyCount + coldCount;
+        let allergyPercent = (allergyCount / totalCount) * 100;
+        let coldPercent = (coldCount / totalCount) * 100;
+
+	var resultText = document.getElementById("results")
+        document.getElementById("result").innerHTML = "Probability it is allergies: " + allergyPercent + "% <br>" + "Probability it is a cold: " + coldPercent + "%";
+      }
+  </script>
+	
+  <!--<script>
 	var resultText = document.getElementById("results")
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent </p>
   </script>
+  -->
   <!--Adding result script function here to keep scripts organized.-->
 
 
