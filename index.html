@@ -61,6 +61,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
        document.getElementById("result").innerHTML = "Probability it is allergies: " + allergyPercent + "% <br>" + "Probability it is a cold: " + coldPercent + "%";
 	  }
   </script>
+  <!-- Button for results is not retrieving input function getResults is offering.-->
 	
   <!--<script>
 	var resultText = document.getElementById("results")
@@ -130,6 +131,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a fever?</p>
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> 
+		<!--Having a fever will add to cold, while not having a fever will not.-->
 		<!--Same practice as page one used, except this time it is directing to page 3. It should continue in sequential order.-->
 	</div>
 </div>
@@ -156,7 +158,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<!--ADD COMMENT-->
+		<!--Yes if symptoms are season adds to allergy and no for chronic adds against cold count.-->
 	</div>
 </div>
 
@@ -166,10 +168,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Are you experiencing a rash or hives?</p>
+		<p>Are you experiencing a rash or hive-like symptoms?</p>
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<!--ADD COMMENT-->
+		<!--If the individial is experiencing this, it will add to allergy through Yes. If not, No should be clicked going against cold.-->
 	</div>
 </div>
 
@@ -182,7 +184,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are you having headache or migraine symptoms?</p>
 		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
-		<!--ADD COMMENT-->
+		<!--These symptoms would add to cold and take away from the allergy add.-->
 	</div>
 </div>
 
