@@ -51,18 +51,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
-  </script>
-  <!--Noting to self: this is what is being used to count and why alerts are counting up when clicking yes.-->	
-
-  <script>
 	function getResults()
 	  {
-		let totalCount = allergyCount + coldCount;
-       		let allergyPercent = (allergyCount / totalCount) * 100;
-        	let coldPercent = (coldCount / totalCount) * 100;
+		var totalCount = allergy_count + cold_count;
+       		var allergyPercent = (allergy_count / totalCount) * 100;
+        	var coldPercent = (cold_count / totalCount) * 100;
+		var resultText = document.getElementById("results");
 	  
-	var resultText = document.getElementById("results");
-        document.getElementById("result").innerHTML = "Probability it is allergies: " + allergyPercent + "% <br>" + "Probability it is a cold: " + coldPercent + "%";
+       document.getElementById("result").innerHTML = "Probability it is allergies: " + allergyPercent + "% <br>" + "Probability it is a cold: " + coldPercent + "%";
 	  }
   </script>
 	
@@ -196,8 +192,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p id="results"> Probability it is allergies = allergyPercent + <br> Probability it is a cold = coldPercent </p>
-		<a href="#results" class="w3-btn w3-black"> Final Results </a>
+		<button onclick= "getResults();">Results</button>
+		<p id="results"></p>
+		<!-- Should work to display percentages received from getResults function. -->
+		<!--
+		<p id="results"> Probability it is allergies = allergyPercent <br> Probability it is a cold = coldPercent </p>
+		<a href="#results" class="w3-btn w3-black"> FinalResults </a>
+		-->
  		<!--Having a lot of trouble with results display. May be issue between connection with this and the script located in beginning of code.-->
 	</div>
 </div>
