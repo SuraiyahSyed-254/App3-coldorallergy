@@ -115,6 +115,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	
+	<!-- Above information accounts for what is seen on first page (this is given), and is the start of the button functionality between multiple pages.-->
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -152,6 +154,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>		
         	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+		<!--In this question, having a sore throat will add to cold count, but no will work against allegy count.-->
 		<!--Asking alternative questions to get a difference in totals or percentages between allergy and cold.-->
 	</div>
 </div>
@@ -165,7 +168,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<!--Yes if symptoms are season adds to allergy and no for chronic adds against cold count.-->
+		<!--Button function. Yes if symptoms are season adds to allergy and no for chronic adds against cold count.-->
 	</div>
 </div>
 
@@ -192,6 +195,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
 		<!--These symptoms would add to cold and take away from the allergy add.-->
+		<!--Final question, so next page will direct individuals to results and final computation of percent cold and percent allergy.-->
 	</div>
 </div>
 
@@ -202,13 +206,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<button onclick= "getResults();">Results</button>
+		<!-- Different method for making buttons utilized!-->
 		<p id="results"></p>
 		<!-- Should work to display percentages received from getResults function. -->
+		
 		<!--
 		<p id="results"> Probability it is allergies = allergyPercent <br> Probability it is a cold = coldPercent </p>
 		<a href="#results" class="w3-btn w3-black"> FinalResults </a>
 		-->
  		<!--Having a lot of trouble with results display. May be issue between connection with this and the script located in beginning of code.-->
+		<!-- UPDATE! Above two comments accounted for difficulties that were fixed by replacing resultText variable function with its name in the innerHTML element.-->
 	</div>
 </div>
 
