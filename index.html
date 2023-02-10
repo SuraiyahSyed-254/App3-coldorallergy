@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 This app hopes to assess symptoms and other conditions of an individual to determine whether they have a cold or allergy.
  
 Known Issues:
-Will fill in when issues are encountered.
+Results page isn't displaying the sentence in coordination with the results function. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -52,6 +52,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
   </script>
+  <!--Noting to self: this is what is being used to count and why alerts are counting up when clicking yes.-->	
 	
   <script>
 	var resultText = document.getElementById("results")
@@ -82,6 +83,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 1;
 }
 </style>
+<!--Provides for the way the page is formatted. CSS elements.-->	
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
@@ -106,6 +108,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your eyes watery or itchy?</p>    
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<!--Making a yes or no button. Yes will go towards allergy count and no goes towards cold. Apply to each question's button.-->
     	</div>
 </div>
 
@@ -118,6 +121,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a fever?</p>
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<!--Same practice as page one used, except this time it is directing to page 3. It should continue in sequential order.-->
 	</div>
 </div>
 
@@ -130,6 +134,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<!--Asking alternative questions to get a difference in totals or percentages between allergy and cold.-->
 	</div>
 </div>
 
@@ -142,6 +147,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<!--Last transition to the results page for final analysis.-->
 	</div>
 </div>
 
@@ -153,7 +159,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p id-"results"> Probability it is allergies = allergyPercent + <br> Probability it is a cold = coldPercent </p>
 		<a href="#results" class="w3-btn w3-black"> Final Results </a>
- 		
+ 		<!--Having a lot of trouble with results display. May be issue between connection with this and the script located in beginning of code.-->
 	</div>
 </div>
 
