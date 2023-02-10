@@ -97,9 +97,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-	<p>Are your eyes watery or itchy?</p>    
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<p>Are your eyes watery or itchy?</p>    
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
 
@@ -110,6 +110,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 
@@ -120,6 +122,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 
@@ -130,8 +134,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
+		<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
-</div>	
+</div>
+
+<div class="page" id="results">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		var resultText = document.getElementById("results")
+		<p id-"results"> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent </p>
+		<a href="#results" class="w3-btn w3-black"> Final Results </a>	
+	</div>
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
